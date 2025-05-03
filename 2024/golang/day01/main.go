@@ -12,11 +12,11 @@ func part1(left, right []int) int {
 	sort.Ints(left)
 	sort.Ints(right)
 
-	for i := 0; i < len(left); i++ {
-		if left[i] > right[i] {
-			ans += left[i] - right[i]
+	for idx, _ := range left {
+		if left[idx] > right[idx] {
+			ans += left[idx] - right[idx]
 		} else {
-			ans += right[i] - left[i]
+			ans += right[idx] - left[idx]
 		}
 	}
 
