@@ -34,7 +34,7 @@ func part2(levels []int) bool {
 		return true
 	}
 
-	for skip := 0; skip < len(levels); skip++ {
+	for skip := range len(levels) {
 		var levelsWithSkip []int
 		for index, value := range levels {
 			if index != skip {
